@@ -17,6 +17,12 @@ module Marketplace
       @items.reduce(0) { |total, cart_item| total + cart_item.quantity }
     end
 
+    def total
+      @items.reduce(BigDecimal(0)) do |total, cart_item|
+        total + (cart_item.product.price * cart_item.quantity)
+      end
+    end
+
     private
 
     def add_to_cart(product, quantity)
