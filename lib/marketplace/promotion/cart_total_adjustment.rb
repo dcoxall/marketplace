@@ -6,12 +6,12 @@ module Marketplace
         @discount = discount
       end
 
-      def applicable?(cart)
-        cart.total >= @value
+      def applicable?(_cart, total)
+        total >= @value
       end
 
-      def adjustment(cart)
-        cart.total * @discount * -1
+      def adjustment(_cart, total)
+        total * @discount * -1
       end
     end
   end
