@@ -4,4 +4,5 @@ require 'bigdecimal'
 
 require 'marketplace/cart'
 require 'marketplace/promotion/cart_total_adjustment'
+require 'marketplace/promotion/product_price_adjustment'
 require 'marketplace/checkout'
